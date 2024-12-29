@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contacto</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300i,400" rel="stylesheet">
+</head>
+<style>
+body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+body{background:#768995;margin:0}
+
+.form{width:340px;height:440px;background:#e6e6e6;border-radius:8px;box-shadow:0 0 40px -10px #000;margin:calc(50vh - 220px) auto;padding:20px 30px;max-width:calc(100vw - 40px);box-sizing:border-box;font-family:'Montserrat',sans-serif;position:relative}
+
+h2{margin:10px 0;padding-bottom:10px;width:180px;color:#78788c;border-bottom:3px solid #78788c}
+
+input{width:100%;padding:10px;box-sizing:border-box;background:none;outline:none;resize:none;border:0;font-family:'Montserrat',sans-serif;transition:all .3s;border-bottom:2px solid #bebed2}
+
+input:focus{border-bottom:2px solid #78788c}
+
+p:before{content:attr(type);display:block;margin:28px 0 0;font-size:14px;color:#5a5a5a}
+
+button{float:right;padding:8px 12px;margin:8px 0 0;font-family:'Montserrat',sans-serif;border:2px solid #78788c;background:0;color:#5a5a6e;cursor:pointer;transition:all .3s}
+
+button:hover{background:#78788c;color:#fff}
+
+div{
+    content:'Hi';position:absolute;bottom:-15px;right:-20px;background:#50505a;color:#fff;width:320px;padding:16px 4px 16px 0;border-radius:6px;font-size:13px;box-shadow:10px 10px 40px -14px #000}
+
+span{
+    margin:0 5px 0 15px}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #43505e;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover:not(.active) {
+  background-color: #111;
+}
+
+.active {
+  background-color: #1b76ed;
+}
+.active2 {
+  background-color: #5691dd;
+}
+
+
+        /* Footer */
+.footer {
+    background-color: #43505e;
+    color: white;
+    text-align: center;
+    padding: 2rem;
+    position: relative; 
+}
+
+
+.footer-image {
+    max-width: 100px;
+    height: auto; 
+    display: block; 
+    margin: 0 auto; 
+}
+
+
+ 
+</style>
+<body>
+    <ul>
+        <li><a href="../simtec.html">Inicio</a></li>
+        <li><a href="Nosotros.html">Nosotros</a></li>
+        <li><a href="Contacto.html">Contacto</a></li>
+        <li><a href="Servicios.html">Servicios</a></li>
+        <li style="float:right"><a class="active" href="#about">Users</a><li style="float:right"><a class="active2" href="#about">Admin</a></li>
+      </ul>
+
+   
+      <form class="form" action="https://formspree.io/f/mlddnbdv" method="POST">
+        <h2>CONTACTO</h2>
+        <p type="Nombre:"><input type="text" name="nombre" placeholder="¿Cómo te llamas?" required></p>
+        <p type="Email:"><input type="email" name="email" placeholder="Déjanos tu correo de contacto" required></p>
+        <p type="Mensaje:"><textarea name="mensaje" placeholder="¿Qué nos quieres decir?" required></textarea></p>
+        <button type="submit">Enviar Mensaje</button>
+        <div>
+            <span class="fa fa-phone"></span> 3325311911
+            <span class="fa fa-envelope-o"></span> Josaac101@gmail.com
+        </div>
+    </form>
+    
+  
+
+  <footer class="footer">
+    <p>&copy; 2024 simtec. Todos los derechos reservados.</p>
+    <img src="../logos/logo-sin-fondo.png" alt="Imagen" class="footer-image">
+  </footer>
+
+  
+</body>
+</html>
