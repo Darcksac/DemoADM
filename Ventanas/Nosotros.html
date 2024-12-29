@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Página Web</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Open Sans', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #768995;
+        }
+
+        /* Navbar */
+        ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #43505e;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover:not(.active) {
+  background-color: #111;
+}
+
+.active {
+  background-color: #1b76ed;
+}
+.active2 {
+  background-color: #5691dd;
+}
+
+        /* Grid */
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2rem;
+            padding: 2rem;
+        }
+
+        /* Card */
+        .card {
+            background: #e6e6e6;
+            color: #78788c;
+            border-radius: 10px;
+            padding: 2rem;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+        }
+
+        .card svg {
+            width: 50px;
+            height: 50px;
+            margin-bottom: 1rem;
+        }
+
+        .card h3 {
+            margin-top: 0;
+            font-size: 1.5rem;
+        }
+
+        .card p {
+            font-size: 1rem;
+
+        }
+        .card-link {
+    text-decoration: none;
+}
+a {
+    text-decoration: none;
+}
+
+
+
+
+        /* Footer */
+.footer {
+    background-color: #43505e;
+    color: white;
+    text-align: center;
+    padding: 2rem;
+    position: relative; 
+}
+
+
+.footer-image {
+    max-width: 100px;
+    height: auto; 
+    display: block; 
+    margin: 0 auto; 
+}
+    </style>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <ul>
+        <li><a href="../simtec.html">Inicio</a></li>
+        <li><a href="Nosotros.html">Nosotros</a></li>
+        <li><a href="Contacto.html">Contacto</a></li>
+        <li><a href="Servicios.html">Servicios</a></li>
+        <li style="float:right"><a class="active" href="#about">Users</a><li style="float:right"><a class="active2" href="#about">Admin</a></li>
+      </ul>
+
+    <!-- Grid de tarjetas -->
+    <div class="grid">
+        <div class="card">
+            <i class="material-icons">create</i>
+            <h3>Nuestros Valores</h3>
+            <p>Integridad: Ser honesto y ético en todas las acciones y decisiones.</p>
+            <p>Innovación: Fomentar la creatividad y la mejora continua.</p>
+            <p>Responsabilidad social: Contribuir al bienestar de la comunidad y al desarrollo sostenible.</p>
+        </div>
+        <div class="card">
+            <i class="material-icons">book</i>           
+             <h3>Declaración de Propósito</h3>
+            <p>Misión:
+                Ofrecer soluciones innovadoras que satisfagan las necesidades de nuestros clientes.</p>
+            <p></p>Visión:
+                Ser líderes en el sector, reconocidos por nuestra excelencia e innovación.</p>
+        </div>           
+        
+        <a href="https://www.linkedin.com/uas/login?session_redirect=https%3A%2F%2Fwww.linkedin.com%2Fcompany%2Fsimtec-asesores%2Fposts%2F%3FfeedView%3Dall"class="card-link">
+        <div class="card">
+            <i class="fab fa-linkedin"></i>         
+             <h3>Linkedin</h3>
+            <p>Visitanos en Linkedin</p>
+        </div>
+        </a>
+        <a href="https://www.whatsapp.com/?lang=es_LA"class="card-link">
+        <div class="card">
+            <i class="fab fa-whatsapp"></i>       
+             <h3>Whatsapp</h3>
+            <p>Contactanos por:</p>
+        </div>
+    </a>
+        <a href="https://www.facebook.com/profile.php?id=61566175084802"class="card-link">
+        <div class="card">
+            <i class="fab fa-facebook"></i>         
+             <h3>Facebook</h3>
+            <p>Visitanos en facebook</p>
+        </div>
+    </a>
+        <a href="https://maps.app.goo.gl/EqeYjB3hEmSTvnFw7" class="card-link">
+            <div class="card">
+                <i class="fas fa-map-marker-alt"></i>           
+                <h3>Nuestra Ubicacion</h3>
+                <p>Plaza Patria
+                    Zapopan, Jal.</p>
+            </div>
+        </a>
+        
+    </div>
+
+    <footer class="footer">
+        <p>&copy; 2024 simtec. Todos los derechos reservados.</p>
+        <img src="../logos/logo-sin-fondo.png" alt="Imagen" class="footer-image">
+      </footer>
+
+    
+
+</body>
+</html>
