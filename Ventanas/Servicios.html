@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Página Web</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Open Sans', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #768995;
+        }
+
+        /* Navbar */
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #43505e;
+        }
+
+        li {
+            float: left;
+        }
+
+        li a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        li a:hover:not(.active) {
+            background-color: #111;
+        }
+
+        .active {
+            background-color: #1b76ed;
+        }
+        .active2 {
+            background-color: #5691dd;
+        }
+
+        /* Estilo para el section */
+        section {
+            padding: 20px;
+            margin-top: 60px; /* Ajusta para que no se superponga con la navbar */
+        }
+
+        /* Cards de contenido */
+        body {
+            font-family: "Oxygen", sans-serif;
+            color: #050505;
+        }
+
+        * ,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+        }
+
+        .main {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .cards {
+            display: flex;
+            flex-wrap: wrap;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            background-color: #768995;
+        }
+
+        .cards_item {
+            display: flex;
+            padding: 1rem;
+        }
+
+        .card_image {
+            position: relative;
+            max-height: 250px;
+        }
+
+        .card_image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .card_price {
+            position: absolute;
+            bottom: 8px;
+            right: 8px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 45px;
+            height: 45px;
+            border-radius: 0.25rem;
+            background-color: #3a62e4;
+            font-size: 18px;
+            font-weight: 700;
+        }
+
+        .card_price span {
+            font-size: 12px;
+            margin-top: -2px;
+        }
+
+        .note {
+            position: absolute;
+            top: 8px;
+            left: 8px;
+            padding: 4px 8px;
+            border-radius: 0.25rem;
+            background-color: #3a62e4;
+            font-size: 14px;
+            font-weight: 700;
+        }
+
+        @media (min-width: 40rem) {
+            .cards_item {
+                width: 50%;
+            }
+        }
+
+        @media (min-width: 56rem) {
+            .cards_item {
+                width: 33.3333%;
+            }
+        }
+
+        .card {
+            background-color: white;
+            border-radius: 0.25rem;
+            box-shadow: 0 20px 40px -14px rgba(0, 0, 0, 0.25);
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+        }
+
+        .card_content {
+            position: relative;
+            padding: 16px 12px 32px 24px;
+            margin: 16px 8px 8px 0;
+            max-height: 290px;
+            overflow-y: scroll;
+        }
+
+        .card_content::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        .card_content::-webkit-scrollbar-track {
+            box-shadow: 0;
+            border-radius: 0;
+        }
+
+    
+        .card_title {
+            position: relative;
+            margin: 0 0 24px;
+            padding-bottom: 10px;
+            text-align: center;
+            font-size: 20px;
+            font-weight: 700;
+        }
+
+        .card_title::after {
+            position: absolute;
+            display: block;
+            width: 50px;
+            height: 2px;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: #3a62e4;
+            content: "";
+        }
+
+        .card_text p {
+            margin: 0 0 24px;
+            font-size: 14px;
+            line-height: 1.5;
+        }
+
+        .card_text p:last-child {
+            margin: 0;
+        }
+
+        /* Footer */
+        .footer {
+            background-color: #43505e;
+            color: white;
+            text-align: center;
+            padding: 2rem;
+            position: relative;
+        }
+
+        .footer-image {
+            max-width: 100px;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <ul>
+        <li><a href="../simtec.html">Inicio</a></li>
+        <li><a href="Nosotros.html">Nosotros</a></li>
+        <li><a href="Contacto.html">Contacto</a></li>
+        <li><a href="Servicios.html">Servicios</a></li>
+        <li style="float:right"><a class="active" href="#about">Users</a><li style="float:right"><a class="active2" href="#about">Admin</a></li>
+    </ul>
+
+    <!-- Sección de contenido -->
+    <section>
+        <div class="main">
+            <ul class="cards">
+              <li class="cards_item">
+                <div class="card">
+                  <div class="card_image">
+                    <img src="https://simtecasesores.com/img/servicios/3.jpeg" />
+                  </div>
+                  <div class="card_content">
+                    <h2 class="card_title">Automatizaciones</h2>
+                    <div class="card_text">
+                      <p>Diseño de líneas y proyectos de manufactura Automática o semiautomática.
+                      </p>
+                    
+                    </div>
+                  </div>
+                </div>
+              </li>
+          
+              <li class="cards_item">
+                <div class="card">
+                  <div class="card_image">
+                    <img src="https://simtecasesores.com/img/servicios/4.jpeg"  />
+                  </div>
+                  <div class="card_content">
+                    <h2 class="card_title">Soporte técnico especializado</h2>
+                    <div class="card_text">
+                      <p>Operarios de producción, Soporte de ingeniería, MDS, Análisis de Falla, Reparaciones Críticas, entre otros.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </li>
+          
+              <li class="cards_item">
+                <div class="card">
+                  <div class="card_image">
+                    <img src="https://simtecasesores.com/img/servicios/5.jpeg"  />
+                  </div>
+                  <div class="card_content">
+                    <h2 class="card_title">Sorteos y Certificaciones de calidad</h2>
+                    <div class="card_text">
+                      <p>CSL 2, CSL 3</p>
+                    </div>
+                  </div>
+                </div>
+              </li>
+
+              <li class="cards_item">
+                <div class="card">
+                  <div class="card_image">
+                    <img src="https://simtecasesores.com/img/servicios/6.jpeg"  />
+                  </div>
+                  <div class="card_content">
+                    <h2 class="card_title">Incoming Inspection</h2>
+                    <div class="card_text">
+                      <p>Bajo especificaciones y AQL del cliente.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </li>
+
+              <li class="cards_item">
+                <div class="card">
+                  <div class="card_image">
+                    <img src="https://simtecasesores.com/img/servicios/8.jpeg"  />
+                  </div>
+                  <div class="card_content">
+                    <h2 class="card_title">Consultoría y Asesoría</h2>
+                    <div class="card_text">
+                      <p>Lean Manufacturing herramientas básicas y proyectos six sigma.
+
+                        Certificaciones ISO (Implementación del sistema de gestión de calidad).
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </li>
+
+              <li class="cards_item">
+                <div class="card">
+                  <div class="card_image">
+                    <img src="https://simtecasesores.com/img/servicios/1.jpeg"  />
+                  </div>
+                  <div class="card_content">
+                    <h2 class="card_title">Inspección de materiales</h2>
+                    <div class="card_text">
+                      <p>Electrónico, Mecánico, Ensambles.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </li>
+
+              <li class="cards_item">
+                <div class="card">
+                  <div class="card_image">
+                    <img src="https://simtecasesores.com/img/servicios/2.jpeg"  />
+                  </div>
+                  <div class="card_content">
+                    <h2 class="card_title">Retrabajos</h2>
+                    <div class="card_text">
+                      <p>Reparaciones electrónicas, formación de Kits y empaque / Re-empaque, Maquinados entre otros, Partes fuera de especificación.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2024 simtec. Todos los derechos reservados.</p>
+        <img src="../logos/logo-sin-fondo.png" alt="Imagen" class="footer-image">
+    </footer>
+
+</body>
+</html>
