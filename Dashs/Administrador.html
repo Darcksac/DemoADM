@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panel administrativo Demo</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #f4f4f9;
+        }
+
+        header {
+            background: #43505e;
+            color: white;
+            padding: 15px 0;
+            text-align: center;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        }
+
+        header img {
+            max-width: 200px; 
+            height: auto;
+        }
+
+        /* Navbar */
+        nav {
+            background: #333;
+            color: white;
+            padding: 10px 0;
+            text-align: center;
+        }
+
+        nav a {
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            margin: 0 15px;
+        }
+
+        nav a:hover {
+            background-color: #555;
+            border-radius: 5px;
+        }
+
+        .container {
+            margin: 20px auto;
+            width: 90%;
+            max-width: 1200px;
+        }
+
+        .card {
+            background: white;
+            margin: 20px auto;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .card:hover {
+            transform: scale(1.02);
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        table th, table td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+
+        table th {
+            background-color: #43505e;
+            color: white;
+        }
+
+        .button {
+            padding: 10px 15px;
+            color: white;
+            background-color: #43505e;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .button:hover {
+            background-color: #5a6471;
+        }
+
+        .chart {
+            width: 100%;
+            height: 300px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .bar {
+            width: 20%;
+            margin: 0 10px;
+            background: #43505e;
+            text-align: center;
+            color: white;
+            animation: grow 2s ease-in-out;
+        }
+
+        @keyframes grow {
+            from {
+                height: 0;
+            }
+            to {
+                height: var(--height);
+            }
+        }
+
+        /* Footer */
+        .footer {
+            background-color: #43505e;
+            color: white;
+            text-align: center;
+            padding: 2rem;
+            position: relative; 
+        }
+
+        .footer-image {
+            max-width: 100px;
+            height: auto; 
+            display: block; 
+            margin: 0 auto; 
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="../logos/LOGOSIM.png" alt="Logo">
+    </header>
+
+    <!-- Navbar -->
+    <nav>
+        <a href="#">Servicios</a>
+        <a href="#">Usuarios</a>
+        <a href="#">Reportes</a>
+        <a href="#">Estadísticas</a>
+        <a href="#">Registros</a>
+        <a href="#">Configuración</a>
+        <a href="#">Soporte</a>
+        <a href="../simtec.html">Atras</a>
+
+    </nav>
+
+    <div class="container">
+        <!-- Dashboard Section -->
+        <div class="card">
+            <h2>Dashboard</h2>
+            <p>Bienvenido al panel administrativo. Aquí puedes gestionar todos los aspectos del sistema.</p>
+        </div>
+
+        <!-- CRUD Section -->
+        <div class="card">
+            <h2>Gestión de Servicios</h2>
+            <button class="button">Agregar nuevo servicio</button>
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Empresa</th>
+                        <th>Servicio</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>Flex</td>
+                        <td>flex@example.com</td>
+                        <td>
+                            <button class="button">Editar</button>
+                            <button class="button" style="background-color: red;">Borrar</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Molex</td>
+                        <td>molex@example.com</td>
+                        <td>
+                            <button class="button">Editar</button>
+                            <button class="button" style="background-color: red;">Borrar</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- User Management Section -->
+        <div class="card">
+            <h2>Gestión de Usuarios</h2>
+            <button class="button">Agregar nuevo usuario</button>
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Nombre</th>
+                        <th>Email</th>
+                        <th>Rol</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>Ernesto Aguilar</td>
+                        <td>juan@example.com</td>
+                        <td>Administrador</td>
+                        <td>
+                            <button class="button">Editar</button>
+                            <button class="button" style="background-color: red;">Borrar</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Ana López</td>
+                        <td>ana@example.com</td>
+                        <td>Usuario</td>
+                        <td>
+                            <button class="button">Editar</button>
+                            <button class="button" style="background-color: red;">Borrar</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Report Section -->
+        <div class="card">
+            <h2>Reportes</h2>
+            <button class="button">Generar Reporte</button>
+            <p>Seleccione un tipo de reporte:</p>
+            <select>
+                <option value="1">Mensual</option>
+                <option value="2">Anual</option>
+                <option value="3">Por usuario</option>
+            </select>
+        </div>
+
+        <!-- Chart Section -->
+        <div class="card">
+            <h2>Estadísticas Generales</h2>
+            <div class="chart">
+                <div class="bar" style="height: 50%; --height: 50%">50%</div>
+                <div class="bar" style="height: 75%; --height: 75%">75%</div>
+                <div class="bar" style="height: 90%; --height: 90%">90%</div>
+                <div class="bar" style="height: 60%; --height: 60%">60%</div>
+                <div class="bar" style="height: 80%; --height: 80%">80%</div>
+            </div>
+        </div>
+
+        <!-- Log Section -->
+        <div class="card">
+            <h2>Registros de Actividad</h2>
+            <p>Últimos movimientos:</p>
+            <ul>
+                <li>Usuario Neric Pérez actualizó un servicio.</li>
+                <li>Usuario Ana Aguilar agregó un nuevo usuario.</li>
+                <li>Se generó un reporte anual.</li>
+            </ul>
+        </div>
+
+        <!-- Settings Section -->
+        <div class="card">
+            <h2>Configuración</h2>
+            <p>Ajuste las configuraciones generales del sistema.</p>
+        </div>
+
+        <!-- Support Section -->
+        <div class="card">
+            <h2>Soporte</h2>
+            <p>Contacte al soporte para asistencia adicional.</p>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <p>&copy; 2024 Simtec. Todos los derechos reservados.</p>
+        <img src="../logos/logo-sin-fondo.png" alt="Imagen" class="footer-image">
+    </footer>
+</body>
+</html>
