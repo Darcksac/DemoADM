@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panel de Cliente</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #f4f4f9;
+        }
+
+        header {
+            background: #43505e;
+            color: white;
+            padding: 15px 0;
+            text-align: center;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        }
+
+        header img {
+            max-width: 200px; 
+            height: auto;
+        }
+
+        /* Navbar */
+        nav {
+            background: #333;
+            color: white;
+            padding: 10px 0;
+            text-align: center;
+        }
+
+        nav a {
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            margin: 0 15px;
+        }
+
+        nav a:hover {
+            background-color: #555;
+            border-radius: 5px;
+        }
+
+        .container {
+            margin: 20px auto;
+            width: 90%;
+            max-width: 1200px;
+        }
+
+        .card {
+            background: white;
+            margin: 20px auto;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .card:hover {
+            transform: scale(1.02);
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        table th, table td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+
+        table th {
+            background-color: #43505e;
+            color: white;
+        }
+
+        .button {
+            padding: 10px 15px;
+            color: white;
+            background-color: #43505e;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .button:hover {
+            background-color: #5a6471;
+        }
+
+        .chart {
+            width: 100%;
+            height: 300px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .bar {
+            width: 20%;
+            margin: 0 10px;
+            background: #43505e;
+            text-align: center;
+            color: white;
+            animation: grow 2s ease-in-out;
+        }
+
+        @keyframes grow {
+            from {
+                height: 0;
+            }
+            to {
+                height: var(--height);
+            }
+        }
+
+        .footer {
+            background-color: #43505e;
+            color: white;
+            text-align: center;
+            padding: 2rem;
+            position: relative; 
+        }
+
+        .footer-image {
+            max-width: 100px;
+            height: auto; 
+            display: block; 
+            margin: 0 auto; 
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="../logos/LOGOSIM.png" alt="Logo">
+    </header>
+
+    <!-- Navbar -->
+    <nav>
+        <a href="#">Dashboard</a>
+        <a href="#">Mis Servicios</a>
+        <a href="#">Solicitar Cotización</a>
+        <a href="#">Reportes</a>
+        <a href="#">Estadísticas</a>
+        <a href="#">Soporte</a>
+        <a href="../simtec.html">Atras</a>
+    </nav>
+
+    <div class="container">
+        <!-- Dashboard Section -->
+        <div class="card">
+            <h2>Bienvenido al Panel de Cliente</h2>
+            <p>Aquí puedes gestionar tus servicios y realizar cotizaciones de otros servicios que puedas necesitar.</p>
+        </div>
+
+        <!-- Mis Servicios Section -->
+        <div class="card">
+            <h2>Mis Servicios</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Servicio</th>
+                        <th>Estado</th>
+                        <th>Fecha de Inicio</th>
+                        <th>Fecha Estimada de Entrega</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>Desarrollo Web</td>
+                        <td>En Progreso</td>
+                        <td>2024-01-15</td>
+                        <td>2024-02-28</td>
+                        <td><button class="button">Ver Detalles</button></td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Consultoría IT</td>
+                        <td>Finalizado</td>
+                        <td>2023-12-01</td>
+                        <td>2023-12-10</td>
+                        <td><button class="button">Ver Detalles</button></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Solicitar Cotización Section -->
+        <div class="card">
+            <h2>Solicitar Cotización</h2>
+            <button class="button">Cotizar Nuevo Servicio</button>
+            <p>Si necesitas otros servicios, solicita una cotización y nos pondremos en contacto contigo.</p>
+        </div>
+
+        <!-- Gráfica de Avance de Servicios -->
+        <div class="card">
+            <h2>Avance de Mis Servicios</h2>
+            <div class="chart">
+                <div class="bar" style="height: 60%; --height: 60%">60%</div>
+                <div class="bar" style="height: 100%; --height: 100%">100%</div>
+                <div class="bar" style="height: 40%; --height: 40%">40%</div>
+            </div>
+        </div>
+
+        <!-- Reporte Section -->
+        <div class="card">
+            <h2>Reportes</h2>
+            <button class="button">Generar Reporte</button>
+            <p>Selecciona un tipo de reporte:</p>
+            <select>
+                <option value="1">Mensual</option>
+                <option value="2">Anual</option>
+                <option value="3">Por servicio</option>
+            </select>
+        </div>
+
+        <!-- Soporte Section -->
+        <div class="card">
+            <h2>Soporte</h2>
+            <p>Si tienes algún problema o necesitas asistencia, no dudes en ponerte en contacto con nuestro equipo de soporte.</p>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <p>&copy; 2024 Simtec. Todos los derechos reservados.</p>
+        <img src="../logos/logo-sin-fondo.png" alt="Imagen" class="footer-image">
+    </footer>
+</body>
+</html>
